@@ -121,6 +121,37 @@ MANTIKSAL BAGLACLAR
    0 false ifade eder;
    iki sartli durumlarda kullanilir:
    
-    printf("%d", (3 < 4) && (4 == 4));    //1     yani dogru oldugunu ifade eder. iki taraf da true olmak zorundadir.
-    printf("%d", (3 < 4) || (4 == 5));    //1     dogru oldugunu ifade eder. cünkü 1 tarafin dogru olmasi yeterlidir.
+    printf("%d", (3 < 4) && (4 == 4));    //1     yani dogru oldugunu ifade eder. iki taraf da true olmak zorundadir. AND
+    printf("%d", (3 < 4) || (4 == 5));    //1     dogru oldugunu ifade eder. cünkü 1 tarafin dogru olmasi yeterlidir. OR
+    printf("%d", ! (3 < 4));              //0     yanlis oldugunu ifade eder. durumun tam tersine cevirir.            NOT
     
+KOSUL DURUMLARI
+
+  IF, ELSE IF, ELSE
+  
+  int age = 17;
+  
+  if (age < 18) {           //Eger yas 18 den kücük ise blok calisir yoksa calismadan devam eder.
+    printf("Yas 18 den kücüktür");
+  }else if(age ==18) {      // 18 e esit olma durumunda bu blok calisir.
+    printf("Yas 18 dir")
+  }
+    else{                   //Diger kosullarda bu blok calisacaktir.
+    printf("Yas 18 den büyüktür");
+  }
+  
+  
+  SWITCH-CASE
+  
+  int sayi=1;
+  
+  switch(sayi){
+  case 1:
+    printf("sayimiz 1 dir.");
+    break;
+  case 2:  
+    printf("sayimiz 2 dir.");
+    break;
+  default:
+     printf("INVALID");
+  }  
