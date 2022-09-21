@@ -319,3 +319,70 @@ FONKSIYONLAR-(METHODLAR)
   printf("Uzunluk : %d", uzunluk(name));              // Uzunluk : 7
   
   
+POINTER
+
+  int i=5;
+  int *p =&i;
+  
+  eger pointer imiz  nerde oldugunu yazdirmak istersek;           REFERENCE
+  printf("%u", p);                    //11254
+  
+  eger pointer in oldugu konumdaki degeri yazdirmak istersek;     DEREFERENCE
+  printf("%d", *p);                   //5
+  
+  Eger oradaki degeri +1 artirmak istersek;
+  (*p)++;                             //6    parantezi unutma.. islem önceligi!
+  
+  
+POINTER ve ARRAY
+
+  char name[]= "Ali";
+  
+  char *p = name ;     //pointer da car bir pointer olmali. Eger Array ile islem yapiliyorsa & isaretine gerek yok!
+  
+  printf("%c", *p);             //A
+  
+  eger 2. karakteri almak istersek;
+  
+  p++;
+  printf("%c", *p);              //l
+   veya
+  printf("%c", *(p+1)); 
+  
+  KISA YOL: name[1]=*(name+1)
+  printf("%c", p[1]);            //l
+  
+CALL BY VALUE  
+  Iki degerin birbiriyle degerlerinin degistirilmesi
+  
+  void swap (int i, int j){
+    //i=5, j=6
+    int temp=i;   //temp=5
+    i=j;
+    j=temp;
+    printf("Degerler : %d %d", i, j);
+  }
+  
+  main method icinde;
+  int a=5;
+  int b=6;
+  swap(a,b);      //Degerler : 6 5    (call by value)
+  printf("a: &%d , b: %d, a, b)       //a:5 b:6 (fonksiyonsuz) 
+  
+  Eger tamamen degissin isteseydik;
+  
+   void swap (int *i, int *j){
+    
+    int temp=*i;   //temp=5
+    *i=*j;
+    *j=temp;
+    printf("Degerler : %d %d", *i, *j);
+  }
+  
+   main method icinde;
+  int a=5;
+  int b=6;
+  swap(&a,&b);      //Degerler : 6 5    (call by reference)
+  printf("a: &%d , b: %d, a, b)       //a:6 b:5 (fonksiyonsuz da olsa degisti) 
+  
+  
