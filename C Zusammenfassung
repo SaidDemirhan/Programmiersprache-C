@@ -240,3 +240,12 @@ ARRAYS
   
 KARAKTER DIZILERI VEYA STRINGLER
 
+  yazilarimizi bu sekilde tutuyoruz.
+  aslinda bütün stringler bir CHAR  ARRAY idir diyebiliriz.
+  
+  char name[] = "Ali";
+
+  C dili aslinda her stringin sonuna \0 seklinde bir karakter koyar ve nerede bittigini bu vesileyle anlar.
+  
+  Eger bu char in ilk iki karakterini yazdirmak istersek;
+  printf("%c, %c", name[0], name[1]);             //A l
