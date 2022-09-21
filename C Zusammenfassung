@@ -100,3 +100,27 @@ KULLANIICIDAN INPUT ALMA
   
   *kullanici istenilen birden fazla degeri girerken enter yerine space tusuna da basabilir.
   
+  eger aldigimiz degerleri toplayip yazdirmak istersek;
+  printf("%d", a + b + c);
+  
+KARSILASTIRMA OPERATORLERI
+  
+  1 true 
+  0 false ifade eder;
+  
+  printf("%d", 3 < 4);    //1     yani dogru oldugunu ifade eder. kücük
+  printf("%d", 3 > 4);    //0         yanlis oldugunu ifade eder. büyük
+  printf("%d", 3 == 4);   //0         yanlis oldugunu ifade eder. esit
+  printf("%d", 3 != 4);    //1        dogru oldugunu ifade eder. esit degil
+  printf("%d", 3 >= 4);    //0        yanlis oldugunu ifade eder. büyük veya esit
+  printf("%d", 3 <= 4);    //1        dogru oldugunu ifade eder. kücük veya esit
+  
+MANTIKSAL BAGLACLAR
+  
+   1 true 
+   0 false ifade eder;
+   iki sartli durumlarda kullanilir:
+   
+    printf("%d", (3 < 4) && (4 == 4));    //1     yani dogru oldugunu ifade eder. iki taraf da true olmak zorundadir.
+    printf("%d", (3 < 4) || (4 == 5));    //1     dogru oldugunu ifade eder. cünkü 1 tarafin dogru olmasi yeterlidir.
+    
