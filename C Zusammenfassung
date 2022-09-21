@@ -155,3 +155,88 @@ KOSUL DURUMLARI
   default:
      printf("INVALID");
   }  
+  
+DÖNGÜLER
+
+  WHILE
+  
+  int i = 0;
+  while (i < 5){
+    printf("i : %d\n", i);
+    i++;
+  }
+
+  FOR
+  
+  int i;
+  
+  for (i=0; i<10; i++){
+     printf("i : %d\n", i);
+  }
+  
+  
+  *BREAK
+  
+  int i=0;
+  while(1){                               //true oldugu müddetce devam edecek.
+    printf("i : %d\n", i);
+    i++;
+    if(i==5)
+      printf("Döngüden cikiliyor.");
+      break;                             // i=5 oldugunda döngüyü bitirecektir.     
+  }
+  
+  
+  *CONTINUE
+  
+  int i=0;
+  while(i<10){
+    if(i==2||i==5){              
+      i++;
+      continue;                      Eger 2 veya 5 olursa (yazdirmadan) basa dön!
+    }
+    printf("i : %d\n", i);
+    i++;
+  }
+  
+ARRAYS
+
+  birden fazla degeri depolamak istersek array leri kullanmamiz gerekir.
+  ARRAY ismi ozel bir kelime oldugu icin isim olarak kullanilamaz!
+  bir array in INDEX i her zaman 0 dan baslar.
+  
+  int dizi[] = {10,20,30,40};
+  
+  eger ücüncü elemanini yazdirmak istersek;
+  
+  printf("%d", dizi[2]);        //30
+  
+  Eger bir Aray i yazdirmak istersek;
+  
+  int i;
+  for(i=0; i<4; i++){
+    printf("ELEMAN : %d\n", dizi[i]);
+  }
+  
+  Eger kullanicidan bir array almak istersek;
+  öncelikle array in hacmini ve adini belirlemeliyiz.
+  
+  int dizi[4];
+  int i;
+  for(i=0, i<4, i++){
+    prinf("Yeni Array Degeri: ");
+    scanf_s("%d", &dizi[i]); 
+  }                                 //eger yazdirmak istersek bir adim yukarisina bak!
+  
+  Eger dizideki rakamlarin toplamini istersek;
+  
+  int dizi[] = {10,20,30,40};
+  int i;
+  int toplam=0;
+  for (i=0; i<4; i++){
+    toplam+= dizi[i];
+  }
+  printf("Toplam :  %d", toplam);
+  
+KARAKTER DIZILERI VEYA STRINGLER
+
