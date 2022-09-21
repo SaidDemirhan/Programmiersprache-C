@@ -249,3 +249,73 @@ KARAKTER DIZILERI VEYA STRINGLER
   
   Eger bu char in ilk iki karakterini yazdirmak istersek;
   printf("%c, %c", name[0], name[1]);             //A l
+  
+  Eger STRING dizimizin tamamini yazdirmak istersek;
+  printf("%s", name);                             //Ali
+  
+  #include <string.h>
+  Eger bu kodu sayfamizin basina yazarsak STRING lerle ilgili extra özelliklere ulasabiliriz.
+  
+  
+  Stringin boyunu yazdirmak icin;
+  printf("%d", strlen(name));
+  
+  
+FONKSIYONLAR-(METHODLAR)
+
+  Eger bir fonksiyon bir deger döndürmeyecekse VOID olmalidir.
+  döndürecekse hangi veri tipnde oldugu mutlaka belirtilmedir. (int, double, pointer vs)
+  
+  Fonksiyon yazmak icin main method un üzeri kullanilir.
+  void test(int a){
+    a=a+1;
+    printf("%d", a);
+  }
+  
+  main methodun icinde;
+  test(10);         seklinde gönderdigimizde bize       //11 yazdiracaktir.
+  Buna FUNCTION CALL denir.
+  
+  baska bir örnek:
+  Sayilari fonksiyon yöntemiyle toplamak istersek;
+  int sayiTopla(int a, int b, int c){
+    int tottal= a+b+c;
+    return total;
+  }
+  
+  int main(){
+    printf( "Toplam: %d", sayiToplami(10,20,30));
+    getchar();
+  }
+  
+  Eger fonksiyon icinde bir ARRAY olursa;
+  
+  int arrayEkle(int a[], int lengt){
+    int toplam=0;
+    int i;
+    for(i=0, i<lengt; i++){
+      toplam+= a[i];
+    }
+    return toplam;
+  }
+  
+  main methodun icinde;
+  int dizi[]= {10,20,30,40,50};
+  printf("%d", arrayekle(dizi,5);           //150
+  
+  Eger bir Array in uzunlugunu bulma fonksiyonu yazmak istersek;
+  int uzunluk(char a[]){
+    int length=0;
+    int i=0;
+    for(; a[i] != '\0'; i++){
+      length++;
+    }
+    return length;
+  }
+  
+  main methodun icinde;
+  char name[]="Mustafa";
+  
+  printf("Uzunluk : %d", uzunluk(name));              // Uzunluk : 7
+  
+  
