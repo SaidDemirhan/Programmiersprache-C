@@ -6,7 +6,97 @@ main methodun mutlaka bulunmasi gerekiyor ve bittigini göstermek icin return ol
   return 0;
   }
   
-  konsolda yazdirmak icin printf, kapanmasini önlemek icin ise getchar kullaniyoruz.;
+konsolda yazdirmak icin printf, kapanmasini önlemek icin ise getchar kullaniyoruz.;
     printf("hello World");
     getchar();
+
+Bir alt satira gecmek icin; \n
+  printf("hello World\n");
+
+yorum satiri icin;
+  //tek satir
+  /*cok
+  Satir*/
+
+Veri tam sayi ise;
+  int i = 10;               4 byte 32bit
+  short int si = 20;        2 byte
+  long int li= 30;          8 byte
+kapladigi yere göre deger alirlar.
+
+Veri virgüllü bir sayi ise;
+  double d = 3.14;          8 byte
+    büyük ondalik sayilar icin double kullanilir. 8 byte
+  float f =2.12;
+
+Karakter veri tipi icin;
+  char c = 'A';             1 byte
+
+FORMAT BELIRLEYICILER
+
+  tam sayi yazdirmak istersek "%d" yazmamiz lazim - desimal manasina gelir.
+  printf("%d", i);
+  
+  ondalik sayilari yazdirmak icin "%f" kullaniriz.
+  printf("%f", d);
+  
+  Eger virgülden sonra sadece 2 basamak olsun istersek;
+   printf("%.2f", d);
+  
+  char karakterini yazdirmak istersek;
+   printf("%c", c);
+   
+  Eger art arda yazdirmak istersek;
+   printf("%d, %f, %c", i, d, c);
+  
+  Eger kac byte kapladigini görmek istersek;
+   printf("%d byte", sizeof(int));
+   
+MATEMATIKSEL ISLEMLER
+
+  printf("%d", 10 + 4);     //14
+  printf("%d", 10 - 4);     //6
+  printf("%d", 10 * 4);     //40
+  printf("%d", 10 / 4);     //2 tam bölünmesini isteseydik %f ve bir tanesini float bir deger yazmaliydik.
+  printf("%d", 10 % 4);     //2 kalani verir
+  
+TYPE CASTING
+
+char- short- int- float- double
+  int float a dönebilir lakin tessi icin islem gerekir.
+  
+    printf("%f", 10 + 4.2)      //14.2
+    printf("%d", (int)4.2);     //4
     
+KISA YAZIMLAR
+
+  a = a + 2; yerine
+  a += 2;    yazabiliriz.
+  
+  a = a + 1; yerine
+  a++; yazabiliriz.
+  
+POSTFIX-PREFIX
+
+  a--; Podtfix
+  --a; Prefix
+  
+KULLANIICIDAN INPUT ALMA
+
+  öncelikle bir tür ve isim belirleyip atama yapmiyoruz.
+  scanner ile ampersand(und) isaretiyle yazilacak yeri gösteriyoruz.
+  
+  int a;
+  scanf_s("%d", &a);
+  
+  kullanicinni girdigi degeri görmek icin ise;
+  printerf("%d",  a);
+  
+  *Scanner kullandigimiz icin programin kapanmasini önlemek amaciyla yeni bir  getchar(); daha yazmamiz gerekir.
+  
+  istersen birdden fazla da input alabilirdik;
+  int a, b, c;
+  scanf_s("%d, %d, %d", &a, &b, &c);
+  
+  *kullanici istenilen birden fazla degeri girerken enter yerine space tusuna da basabilir.
+  
