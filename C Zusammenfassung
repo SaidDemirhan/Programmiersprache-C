@@ -1,0 +1,12 @@
+Her C programinda #include <stdio.h> kütüphanesi en üste yazilmalidir.
+
+main methodun mutlaka bulunmasi gerekiyor ve bittigini göstermek icin return olmali. 
+  int main(){ 
+  .......
+  return 0;
+  }
+  
+  konsolda yazdirmak icin printf, kapanmasini önlemek icin ise getchar kullaniyoruz.;
+    printf("hello World");
+    getchar();
+    
