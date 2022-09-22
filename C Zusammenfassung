@@ -338,7 +338,7 @@ POINTER ve ARRAY
 
   char name[]= "Ali";
   
-  char *p = name ;     //pointer da car bir pointer olmali. Eger Array ile islem yapiliyorsa & isaretine gerek yok!
+  char *p = name ;           //pointer da car bir pointer olmali. Eger Array ile islem yapiliyorsa & isaretine gerek yok!
   
   printf("%c", *p);             //A
   
